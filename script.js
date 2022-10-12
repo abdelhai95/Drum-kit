@@ -1,5 +1,4 @@
 const addPlaying = function (e) {
-  // console.log(e);
   const audio = document.querySelector(`audio[data-key= '${e.keyCode}']`);
   const key = document.querySelector(`.key[data-key= '${e.keyCode}']`);
   if (!audio) return;
@@ -13,7 +12,6 @@ const removePlaying = function (e) {
   key.classList.remove("playing");
 };
 
-// const removePlayingBinded = removePlaying.bind(key);
 const keys = document.querySelectorAll(".key");
 window.addEventListener("keyup", removePlaying);
 window.addEventListener("keydown", addPlaying);
